@@ -1,6 +1,7 @@
 /**
  * Created by airing on 15/10/19.
  */
+var documentWidth = window.screen.availWidth >500? 500: window.screen.availWidth;
 var documentWidth = 500;
 var margin = 16;
 var game_width = 500;
@@ -31,12 +32,12 @@ var score = 0;
 var nums = new Array();
 
 function init(cxt) {
-    //ÓÎÏ·±³¾°
+    //æ¸¸æˆèƒŒæ™¯
     drawRoundRect(cxt, margin_left, margin_top, game_width, game_width, 5);
     cxt.fillStyle = color_bg;
     cxt.fill()
 
-    //³õÊ¼»¯¶şÎ¬Êı×é
+    //åˆå§‹åŒ–äºŒç»´æ•°ç»„
     for(var i = 0; i < 4; i++){
         nums[i] = new Array();
         for(var j = 0; j < 4; j++){
@@ -44,7 +45,7 @@ function init(cxt) {
         }
     }
 
-    //³õÊ¼»¯16¸öĞ¡¸ñ×Ó
+    //åˆå§‹åŒ–16ä¸ªå°æ ¼å­
     updateBoardView(cxt)
 }
 
@@ -180,7 +181,7 @@ function drawBox(cxt, i, j, nums){
     cxt.fill();
 }
 
-//Ë¢ĞÂView
+//åˆ·æ–°View
 function updateBoardView(cxt) {
     for(var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
