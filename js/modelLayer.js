@@ -2,11 +2,10 @@
  * Created by airing on 15/10/19.
  */
 var documentWidth = window.screen.availWidth >500? 500: window.screen.availWidth;
-var documentWidth = 500;
-var margin = 16;
-var game_width = 500;
-var box_width = 105;
-var numSize = 60;
+var margin = 0.04 * documentWidth;
+var game_width = 0.92 * documentWidth;
+var box_width = 0.18 * documentWidth;
+var numSize = 0.10 * documentWidth;
 
 var margin_top = 0;
 var margin_left = 0;
@@ -30,6 +29,11 @@ var color_text1 = "#776F64";
 var color_text2 = "#F7F6F2";
 var score = 0;
 var nums = new Array();
+var nums = new Array();
+var startX = 0;
+var startY = 0;
+var endX = 0;
+var endY = 0;
 
 function init(cxt) {
     //游戏背景
